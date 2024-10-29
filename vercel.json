@@ -1,24 +1,15 @@
-{  
-    "version": 2,  
-    "builds": [  
-        {  
-            "src": "my_app.py",  
-            "use": "@vercel/python",  
-            "config": {  
-                "env": {  
-                    "FLASK_APP": "my_app.py",  
-                    "FLASK_ENV": "production",  
-                    "FLASK_RUN_PORT": "$PORT",  
-                    "FLASK_RUN_HOST": "0.0.0.0",  
-                    "SECRET_KEY": "your_very_secret_key_here"  // 请替换为一个更安全的密钥  
-                }  
-            }  
-        }  
-    ],  
-    "routes": [  
-        {  
-            "src": "/(.*)",  
-            "dest": "my_app.py"  
-        }  
-    ]  
-}
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "my_app.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "my_app.py"
+      }
+    ]
+  }
